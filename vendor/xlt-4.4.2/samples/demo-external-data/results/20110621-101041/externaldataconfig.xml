@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<config>
+	
+	<files>
+		<!--
+			File Parsers:
+			
+			com.xceptance.xlt.api.report.external.SimpleCsvParser
+			Process simple CSV file.
+			Value name is column index number.
+			
+			com.xceptance.xlt.api.report.external.HeadedCsvParser
+			Process headed CSV file.
+			Value names are taken from 1st line of CSV file.
+			
+			For more parsers see package com.xceptance.xlt.api.report.external.
+		 -->
+		<file source="embedded_00/CustomData/data.csv" encoding="UTF-8" parserClass="com.xceptance.xlt.api.report.external.SimpleCsvParser">
+		
+			<headline>Demo CSV report</headline>			
+			<description>This is a demo report based on data from a CSV file.</description>
+						
+			<charts>
+			
+				<chart title="CPU QuadCore" yAxisTitle="Temperature in °C" yAxisTitle2="Usage in %">
+					<seriesCollection>
+						<series valueName="1" title="CPU Temperature" axis="1" color="#00FF00" average="10" averageColor="#008400"/>
+						<series valueName="2" title="CPU Usage" axis="2" color="#FF0000" average="10" averageColor="#840000"/>
+					</seriesCollection>
+				</chart>
+				
+				<chart title="Network traffic" yAxisTitle="kB/s">
+					<seriesCollection>
+						<series valueName="3" title="Incomming network traffic" color="#00FF00" average="10" averageColor="#008400"/>
+						<series valueName="4" title="Outgoing network traffic" color="#0000FF" average="10" averageColor="#000084"/>
+					</seriesCollection>
+				</chart>
+				
+			</charts>
+			
+			<tables>
+			
+				<table title="CPU Statistics" type="minmaxavg">
+					<rows>
+						<row valueName="1" title="CPU Temperature" unit="°C" />
+						<row valueName="2" title="CPU Usage" unit="%" />
+					</rows>
+				</table>
+				
+				<table title="Network Statistics" type="minmaxavg">
+					<rows>
+						<row valueName="3" title="Incomming network traffic" unit="kB/s" />
+						<row valueName="4" title="Outgoing network traffic"  unit="kB/s" />
+					</rows>
+				</table>
+				
+			</tables>
+			
+			<properties>
+				<property key="parser.dateFormat.pattern" value="dd.MM.yyyy HH:mm:ss" />
+				<property key="parser.dateFormat.timeZone" value="GMT+0" />
+				<property key="parser.csv.separator" value="," />
+			</properties>
+			
+		</file>
+		
+		<file source="embedded_00/CustomData/iostat.txt" encoding="UTF-8" parserClass="com.xceptance.xlt.report.external.IostatCpuParser">
+		
+			<headline>iostat Demo</headline>			
+			<description>This is a demo report based on fictitious CPU data taken from an iostat log file (might be from some other machine). For such data an advanced parser was written. See project sources for more details.</description>
+						
+			<charts>
+			
+				<chart title="CPU Usage" yAxisTitle="CPU Usage in %">
+					<seriesCollection>
+						<series valueName="user" title="user" color="#0000FF" />
+						<series valueName="idle" title="idle" color="#00FF00" />
+						<series valueName="system" title="system" color="#FF0000" />
+					</seriesCollection>
+				</chart>
+				
+			</charts>
+			
+			<tables>
+			
+				<table title="CPU Statistics" type="minmaxavg">
+					<rows>
+						<row valueName="user" title="user" unit="%" />
+						<row valueName="idle" title="idle" unit="%" />
+						<row valueName="system" title="system" unit="%" />
+						<row valueName="nice" title="nice" unit="%" />
+						<row valueName="iowait" title="iowait" unit="%" />
+						<row valueName="steal" title="steal" unit="%" />
+					</rows>
+				</table>
+				
+			</tables>
+			
+			<properties>
+				<property key="parser.dateFormat.pattern" value="dd.MM.yyyy HH:mm:ss" />
+				<property key="parser.dateFormat.timeZone" value="GMT+0" />
+				<property key="parser.csv.separator" value="," />
+			</properties>
+			
+		</file>
+	
+	</files>
+	
+</config>

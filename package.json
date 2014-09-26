@@ -1,0 +1,19 @@
+{
+  "name": "xlt-parser",
+  "version": "1.0.0",
+  "description": "parse XLT scripts into JS scripts based on webdriverio APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tri Nguyen <tri@tridnguyen.com>",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "xml-parser": "^1.0.0"
+  },
+  "devDependencies": {
+    "junk": "^1.0.0",
+    "string.prototype.repeat": "^0.2.0"
+  }
+}

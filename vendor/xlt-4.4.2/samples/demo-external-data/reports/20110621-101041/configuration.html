@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html>
+<head>
+<title>Xceptance LoadTest Report - Configuration</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.cluetip.css" />
+<link rel="stylesheet" type="text/css" href="css/superfish.custom.css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js">/* Placeholder */</script>
+<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js">/* Placeholder */</script>
+<script type="text/javascript" src="js/jquery.hoverIntent.minified.js">/* Placeholder */</script>
+<script type="text/javascript" src="js/jquery.cluetip.min.js">/* Placeholder */</script>
+<script type="text/javascript" src="js/jquery.scrollTo.min.js">/* Placeholder */</script>
+<script type="text/javascript" src="js/jquery.superfish.js">/* Placeholder */</script>
+<script src="js/table.js" type="text/javascript">/* Placeholder */</script>
+</head>
+<body id="loadtestreport">
+<div id="container">
+<div id="content">
+	
+
+		<div id="navigation">
+			<ul id="superfish" class="sf-menu">
+				<li><a href="index.html">Overview</a>
+					<ul>
+						<li><a href="index.html#load-profile">Load Profile</a></li>
+						<li><a href="index.html#comment">Test Comments</a></li>
+						<li><a href="index.html#general">General Information</a></li>
+						<li><a href="index.html#active-users">Users</a></li>
+						<li><a href="index.html#network">Network</a></li>
+					</ul>
+				</li>
+				<li><a href="transactions.html">Transactions</a></li>
+				<li><a href="actions.html">Actions</a></li>
+				<li><a href="requests.html">Requests</a></li>
+				<li><a href="custom.html">Custom Timers &amp; Values</a>
+                    <ul>
+                        <li><a href="custom.html#custom-timer-summary">Custom Timers</a></li>
+                        <li><a href="custom.html#custom-value-summary">Custom Values</a></li>
+                    </ul>
+                </li>
+				<li><a href="external.html">External Data</a></li>
+				<li><a href="errors.html">Errors &amp; Events</a>
+					<ul>
+						<li><a href="errors.html#error-summary">Errors</a></li>
+						<li><a href="errors.html#http-response-codes">HTTP Response Codes</a></li>
+						<li><a href="errors.html#event-summary">Events</a></li>
+					</ul>
+				</li>
+				<li><a href="agents.html">Agents</a></li>
+				<li><a href="configuration.html">Configuration</a>
+					<ul>
+						<li><a href="configuration.html#load-profile">Load Profile</a></li>	
+						<li><a href="configuration.html#configuration">Settings</a></li>
+					</ul>
+				</li>	
+			</ul>
+		</div>
+		
+	
+<div id="header">
+<img alt="XLT logo" class="logo" src="images/XLT_logo.png" />
+<h1>Load and Performance Test Report</h1>
+<h2>
+				Created with
+				<a href="http://www.xceptance-loadtest.com/?piwik_campaign=TestReport">
+<span class="productname">Xceptance LoadTest</span>
+<span class="productversion">?.?.?</span>
+</a>
+</h2>
+</div>
+<div id="data-content">
+<div id="load-profile" class="section">
+<h2>Load Profile</h2>
+<div class="content">
+<div class="description">
+<p>
+            This section shows the load profile as configured in the properties files of your test suite.
+        </p>
+</div>
+<div class="data">
+<table>
+<tr>
+<th>Transaction Name</th>
+<th>Users</th>
+<th>Iterations</th>
+<th>Arrival Rate [1/h]</th>
+<th>Initial Delay</th>
+<th>Ramp-Up Period</th>
+<th>Warm-Up Period</th>
+<th>Measurement Period</th>
+<th>Shutdown Period</th>
+</tr>
+<tr class="odd">
+<td class="value text" title="com.xceptance.xlt.samples.THelpBrowsing">THelpBrowsing</td>
+<td class="value number">3</td>
+<td class="value number">&ndash;</td>
+<td class="value number">&ndash;</td>
+<td class="value number">&ndash;</td>
+<td class="value number">&ndash;</td>
+<td class="value number">&ndash;</td>
+<td class="value number">00:01:00</td>
+<td class="value number">&ndash;</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="configuration" class="section">
+<h2>Configuration</h2>
+<div class="content">
+<div class="description">
+<p>
+            The configuration section lists the test configuration used to run this test. It helps to make the test reproducible and preserves the test settings for later test evaluation.
+        </p>
+</div>
+<h3>Load Test Configuration</h3>
+<div class="data">
+<table>
+<tr>
+<th>Property Name</th>
+<th>Property Value</th>
+</tr>
+<tr class="odd">
+<td class="key">awt.toolkit</td>
+<td class="value text">sun.awt.windows.WToolkit</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.abortLongRunningTransactions</td>
+<td class="value text">false</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.api.validators.XHTMLValidator.enabled</td>
+<td class="value text">false</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.browser</td>
+<td class="value text">FF</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.css.cache.size</td>
+<td class="value text">100</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.css.download.images</td>
+<td class="value text">never</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.cssEnabled</td>
+<td class="value text">true</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.data.directory</td>
+<td class="value text">./config/data</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.home</td>
+<td class="value text">d:\workspace\xlt-trunk</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.http.filter.exclude</td>
+<td class="value text"></td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.http.filter.include</td>
+<td class="value text"></td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.http.gzip</td>
+<td class="value text">true</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.http.keepAlive</td>
+<td class="value text">true</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.http.keepAlive.staleConnectionCheck</td>
+<td class="value text">true</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.javaScriptEnabled</td>
+<td class="value text">true</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.js.ajax.executionMode</td>
+<td class="value text">resync</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.js.cache.size</td>
+<td class="value text">100</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.js.debugger.enabled</td>
+<td class="value text">false</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.loadStaticContent</td>
+<td class="value text">true</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.loadtests</td>
+<td class="value text">THelpBrowsing</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.loadtests.comment.commandLine</td>
+<td class="value text">CustomReportDemo</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.loadtests.default.measurementPeriod</td>
+<td class="value text">1m</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.loadtests.default.users</td>
+<td class="value text">3</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.loadtests.THelpBrowsing.class</td>
+<td class="value text">com.xceptance.xlt.samples.THelpBrowsing</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.maxErrors</td>
+<td class="value text">1000</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.maximumTransactionRunTime</td>
+<td class="value text">900000</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.output2disk</td>
+<td class="value text">onError</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.output2disk.onError.dumpMode</td>
+<td class="value text">finalPagesOnly</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.output2disk.size</td>
+<td class="value text">3</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.proxy</td>
+<td class="value text">false</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.proxy.host</td>
+<td class="value text">127.0.0.1</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.proxy.port</td>
+<td class="value text">8888</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.0.contentTypePattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.0.namePattern</td>
+<td class="value text">^([^\.]*)(\.[0-9]+)+$</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.0.newName</td>
+<td class="value text">{n:1}</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.0.statusCodePattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.0.stopOnMatch</td>
+<td class="value text">false</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.0.urlPattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.1.contentTypePattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.1.namePattern</td>
+<td class="value text">[^.]+</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.1.newName</td>
+<td class="value text">{n:0} JS</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.1.statusCodePattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.1.stopOnMatch</td>
+<td class="value text">false</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.1.urlPattern</td>
+<td class="value text">\.js$</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.10.contentTypePattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.10.namePattern</td>
+<td class="value text">.*</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.10.newName</td>
+<td class="value text">{n:0} [{s:0}]</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.10.statusCodePattern</td>
+<td class="value text">[0-9]+</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.10.stopOnMatch</td>
+<td class="value text">false</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.10.urlPattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.3.contentTypePattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.3.namePattern</td>
+<td class="value text">[^.]+</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.3.newName</td>
+<td class="value text">{n:0} Images</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.3.statusCodePattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.3.stopOnMatch</td>
+<td class="value text">false</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.3.urlPattern</td>
+<td class="value text">\.(gif|png|jpg|ico)$</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.5.contentTypePattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.5.namePattern</td>
+<td class="value text">[^.]+</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.5.newName</td>
+<td class="value text">{n:0} CSS</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.5.statusCodePattern</td>
+<td class="value text"></td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.5.stopOnMatch</td>
+<td class="value text">false</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.reportgenerator.requestMergeRules.5.urlPattern</td>
+<td class="value text">\.css$</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.result-dir</td>
+<td class="value text">./results</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.ssl.easyMode</td>
+<td class="value text">true</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.staticContent.downloadThreads</td>
+<td class="value text">4</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.staticContentCache</td>
+<td class="value text">true</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.staticContentCache.size</td>
+<td class="value text">1000</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.stopTestOnHttpErrors.embedded</td>
+<td class="value text">false</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.stopTestOnHttpErrors.page</td>
+<td class="value text">true</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.stopTestOnJavaScriptErrors</td>
+<td class="value text">false</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.testPropertiesFile</td>
+<td class="value text">test.properties</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.thinktime.action</td>
+<td class="value text">100</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.thinktime.action.deviation</td>
+<td class="value text">50</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.thinktime.transaction</td>
+<td class="value text">0</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.thinktime.transaction.deviation</td>
+<td class="value text">0</td>
+</tr>
+<tr class="even">
+<td class="key">com.xceptance.xlt.timeout</td>
+<td class="value text">30000</td>
+</tr>
+<tr class="odd">
+<td class="key">com.xceptance.xlt.useHighPrecisionTimer</td>
+<td class="value text">true</td>
+</tr>
+<tr class="even">
+<td class="key">file.encoding</td>
+<td class="value text">Cp1252</td>
+</tr>
+<tr class="odd">
+<td class="key">file.encoding.pkg</td>
+<td class="value text">sun.io</td>
+</tr>
+<tr class="even">
+<td class="key">file.separator</td>
+<td class="value text">\</td>
+</tr>
+<tr class="odd">
+<td class="key">java.awt.graphicsenv</td>
+<td class="value text">sun.awt.Win32GraphicsEnvironment</td>
+</tr>
+<tr class="even">
+<td class="key">java.awt.printerjob</td>
+<td class="value text">sun.awt.windows.WPrinterJob</td>
+</tr>
+<tr class="odd">
+<td class="key">java.class.path</td>
+<td class="value text">d:\workspace\xlt-trunk\classes;d:\workspace\xlt-trunk\lib\aws-java-sdk-1.3.2.jar;d:\workspace\xlt-trunk\lib\bsh-2.0b4.jar;d:\workspace\xlt-trunk\lib\commons-cli-1.2.jar;d:\workspace\xlt-trunk\lib\commons-codec-1.6.jar;d:\workspace\xlt-trunk\lib\commons-collections-3.2.1.jar;d:\workspace\xlt-trunk\lib\commons-configuration-1.8.jar;d:\workspace\xlt-trunk\lib\commons-exec-1.1.jar;d:\workspace\xlt-trunk\lib\commons-io-2.0.1.jar;d:\workspace\xlt-trunk\lib\commons-lang-2.6.jar;d:\workspace\xlt-trunk\lib\commons-logging-1.1.1.jar;d:\workspace\xlt-trunk\lib\commons-math-2.2.jar;d:\workspace\xlt-trunk\lib\commons-vfs2-2.0.jar;d:\workspace\xlt-trunk\lib\cssparser-0.9.5.jar;d:\workspace\xlt-trunk\lib\dom4j-1.6.1.jar;d:\workspace\xlt-trunk\lib\guava-12.0.jar;d:\workspace\xlt-trunk\lib\hamcrest-core-1.1.jar;d:\workspace\xlt-trunk\lib\hessian-4.0.7.jar;d:\workspace\xlt-trunk\lib\htmlunit-core-js-2.9.jar;d:\workspace\xlt-trunk\lib\httpclient-4.1.3.jar;d:\workspace\xlt-trunk\lib\httpcore-4.1.4.jar;d:\workspace\xlt-trunk\lib\httpmime-4.1.3.jar;d:\workspace\xlt-trunk\lib\jackson-core-asl-1.9.7.jar;d:\workspace\xlt-trunk\lib\jackson-mapper-asl-1.9.7.jar;d:\workspace\xlt-trunk\lib\jaxen-1.1.3.jar;d:\workspace\xlt-trunk\lib\jcommander-1.12.jar;d:\workspace\xlt-trunk\lib\jcommon-1.0.17.jar;d:\workspace\xlt-trunk\lib\jdom-1.0.jar;d:\workspace\xlt-trunk\lib\jetty-6.1.26.jar;d:\workspace\xlt-trunk\lib\jetty-util-6.1.26.jar;d:\workspace\xlt-trunk\lib\jfreechart-1.0.14.jar;d:\workspace\xlt-trunk\lib\jna-3.4.0.jar;d:\workspace\xlt-trunk\lib\json-20080701.jar;d:\workspace\xlt-trunk\lib\jsr305-1.3.9.jar;d:\workspace\xlt-trunk\lib\junit-4.10.jar;d:\workspace\xlt-trunk\lib\log4j-1.2.16.jar;d:\workspace\xlt-trunk\lib\nekohtml-1.9.15.jar;d:\workspace\xlt-trunk\lib\netty-3.2.7.Final.jar;d:\workspace\xlt-trunk\lib\platform-3.4.0.jar;d:\workspace\xlt-trunk\lib\sac-1.3.jar;d:\workspace\xlt-trunk\lib\selenium-android-driver-2.24.1.jar;d:\workspace\xlt-trunk\lib\selenium-api-2.24.1.jar;d:\workspace\xlt-trunk\lib\selenium-chrome-driver-2.24.1.jar;d:\workspace\xlt-trunk\lib\selenium-firefox-driver-2.24.1.jar;d:\workspace\xlt-trunk\lib\selenium-htmlunit-driver-2.24.1.jar;d:\workspace\xlt-trunk\lib\selenium-ie-driver-2.24.1.jar;d:\workspace\xlt-trunk\lib\selenium-iphone-driver-2.24.1.jar;d:\workspace\xlt-trunk\lib\selenium-java-2.24.1.jar;d:\workspace\xlt-trunk\lib\selenium-remote-driver-2.24.1.jar;d:\workspace\xlt-trunk\lib\selenium-safari-driver-2.24.1.jar;d:\workspace\xlt-trunk\lib\selenium-support-2.24.1.jar;d:\workspace\xlt-trunk\lib\serializer-2.7.1.jar;d:\workspace\xlt-trunk\lib\servlet-api-2.5-20081211.jar;d:\workspace\xlt-trunk\lib\slf4j-api-1.6.4.jar;d:\workspace\xlt-trunk\lib\slf4j-log4j12-1.6.4.jar;d:\workspace\xlt-trunk\lib\snakeyaml-1.6.jar;d:\workspace\xlt-trunk\lib\testng-6.5.2.jar;d:\workspace\xlt-trunk\lib\webbit-0.4.6.jar;d:\workspace\xlt-trunk\lib\xalan-2.7.1.jar;d:\workspace\xlt-trunk\lib\xercesImpl-2.9.1.jar;d:\workspace\xlt-trunk\lib\xml-apis-1.3.04.jar;d:\workspace\xlt-trunk\lib\xmlpull-1.1.3.1.jar;d:\workspace\xlt-trunk\lib\xpp3_min-1.1.4c.jar;d:\workspace\xlt-trunk\lib\xstream-1.4.2.jar</td>
+</tr>
+<tr class="even">
+<td class="key">java.class.version</td>
+<td class="value text">50.0</td>
+</tr>
+<tr class="odd">
+<td class="key">java.endorsed.dirs</td>
+<td class="value text">d:\Tools\jdk6\jre\lib\endorsed</td>
+</tr>
+<tr class="even">
+<td class="key">java.ext.dirs</td>
+<td class="value text">d:\Tools\jdk6\jre\lib\ext;C:\Windows\Sun\Java\lib\ext</td>
+</tr>
+<tr class="odd">
+<td class="key">java.home</td>
+<td class="value text">d:\Tools\jdk6\jre</td>
+</tr>
+<tr class="even">
+<td class="key">java.io.tmpdir</td>
+<td class="value text">C:\Users\jwerner\AppData\Local\Temp\</td>
+</tr>
+<tr class="odd">
+<td class="key">java.library.path</td>
+<td class="value text">d:\Tools\jdk6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;d:\Tools;d:\Tools\jdk6\bin;D:\Tools\unix\usr\local\wbin;D:\Tools\ant\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\DMIX;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\NTRU Cryptosystems\NTRU TCG Software Stack\bin\;C:\Program Files\Wave Systems Corp\Gemalto\Access Client\v5\;C:\Program Files (x86)\Common Files\Roxio Shared\DLLShared\;C:\Program Files (x86)\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files\TortoiseSVN\bin</td>
+</tr>
+<tr class="even">
+<td class="key">java.runtime.name</td>
+<td class="value text">Java(TM) SE Runtime Environment</td>
+</tr>
+<tr class="odd">
+<td class="key">java.runtime.version</td>
+<td class="value text">1.6.0_22-b04</td>
+</tr>
+<tr class="even">
+<td class="key">java.specification.name</td>
+<td class="value text">Java Platform API Specification</td>
+</tr>
+<tr class="odd">
+<td class="key">java.specification.vendor</td>
+<td class="value text">Sun Microsystems Inc.</td>
+</tr>
+<tr class="even">
+<td class="key">java.specification.version</td>
+<td class="value text">1.6</td>
+</tr>
+<tr class="odd">
+<td class="key">java.vendor</td>
+<td class="value text">Sun Microsystems Inc.</td>
+</tr>
+<tr class="even">
+<td class="key">java.vendor.url</td>
+<td class="value text">http://java.sun.com/</td>
+</tr>
+<tr class="odd">
+<td class="key">java.vendor.url.bug</td>
+<td class="value text">http://java.sun.com/cgi-bin/bugreport.cgi</td>
+</tr>
+<tr class="even">
+<td class="key">java.version</td>
+<td class="value text">1.6.0_22</td>
+</tr>
+<tr class="odd">
+<td class="key">java.vm.info</td>
+<td class="value text">mixed mode</td>
+</tr>
+<tr class="even">
+<td class="key">java.vm.name</td>
+<td class="value text">Java HotSpot(TM) 64-Bit Server VM</td>
+</tr>
+<tr class="odd">
+<td class="key">java.vm.specification.name</td>
+<td class="value text">Java Virtual Machine Specification</td>
+</tr>
+<tr class="even">
+<td class="key">java.vm.specification.vendor</td>
+<td class="value text">Sun Microsystems Inc.</td>
+</tr>
+<tr class="odd">
+<td class="key">java.vm.specification.version</td>
+<td class="value text">1.0</td>
+</tr>
+<tr class="even">
+<td class="key">java.vm.vendor</td>
+<td class="value text">Sun Microsystems Inc.</td>
+</tr>
+<tr class="odd">
+<td class="key">java.vm.version</td>
+<td class="value text">17.1-b03</td>
+</tr>
+<tr class="even">
+<td class="key">line.separator</td>
+<td class="value text"></td>
+</tr>
+<tr class="odd">
+<td class="key">log4j.configuration</td>
+<td class="value text">file:d:\workspace\xlt-trunk\config\reportgenerator.properties</td>
+</tr>
+<tr class="even">
+<td class="key">os.arch</td>
+<td class="value text">amd64</td>
+</tr>
+<tr class="odd">
+<td class="key">os.name</td>
+<td class="value text">Windows 7</td>
+</tr>
+<tr class="even">
+<td class="key">os.version</td>
+<td class="value text">6.1</td>
+</tr>
+<tr class="odd">
+<td class="key">path.separator</td>
+<td class="value text">;</td>
+</tr>
+<tr class="even">
+<td class="key">sun.arch.data.model</td>
+<td class="value text">64</td>
+</tr>
+<tr class="odd">
+<td class="key">sun.boot.class.path</td>
+<td class="value text">d:\Tools\jdk6\jre\lib\resources.jar;d:\Tools\jdk6\jre\lib\rt.jar;d:\Tools\jdk6\jre\lib\sunrsasign.jar;d:\Tools\jdk6\jre\lib\jsse.jar;d:\Tools\jdk6\jre\lib\jce.jar;d:\Tools\jdk6\jre\lib\charsets.jar;d:\Tools\jdk6\jre\classes</td>
+</tr>
+<tr class="even">
+<td class="key">sun.boot.library.path</td>
+<td class="value text">d:\Tools\jdk6\jre\bin</td>
+</tr>
+<tr class="odd">
+<td class="key">sun.cpu.endian</td>
+<td class="value text">little</td>
+</tr>
+<tr class="even">
+<td class="key">sun.cpu.isalist</td>
+<td class="value text">amd64</td>
+</tr>
+<tr class="odd">
+<td class="key">sun.desktop</td>
+<td class="value text">windows</td>
+</tr>
+<tr class="even">
+<td class="key">sun.io.unicode.encoding</td>
+<td class="value text">UnicodeLittle</td>
+</tr>
+<tr class="odd">
+<td class="key">sun.java.launcher</td>
+<td class="value text">SUN_STANDARD</td>
+</tr>
+<tr class="even">
+<td class="key">sun.jnu.encoding</td>
+<td class="value text">Cp1252</td>
+</tr>
+<tr class="odd">
+<td class="key">sun.management.compiler</td>
+<td class="value text">HotSpot 64-Bit Server Compiler</td>
+</tr>
+<tr class="even">
+<td class="key">sun.os.patch.level</td>
+<td class="value text"></td>
+</tr>
+<tr class="odd">
+<td class="key">user.country</td>
+<td class="value text">US</td>
+</tr>
+<tr class="even">
+<td class="key">user.dir</td>
+<td class="value text">d:\workspace\xlt-trunk\samples\demo-external-data\results</td>
+</tr>
+<tr class="odd">
+<td class="key">user.home</td>
+<td class="value text">C:\Users\jwerner</td>
+</tr>
+<tr class="even">
+<td class="key">user.language</td>
+<td class="value text">en</td>
+</tr>
+<tr class="odd">
+<td class="key">user.name</td>
+<td class="value text">jwerner</td>
+</tr>
+<tr class="even">
+<td class="key">user.timezone</td>
+<td class="value text">Europe/Berlin</td>
+</tr>
+<tr class="odd">
+<td class="key">user.variant</td>
+<td class="value text"></td>
+</tr>
+</table>
+</div>
+<h3>Custom Agent JVM Settings (jvmargs.cfg)</h3>
+<div class="data">
+<table>
+<tr>
+<th>Settings</th>
+</tr>
+<tr class="odd">
+<td class="value text">-Xms512m</td>
+</tr>
+<tr class="even">
+<td class="value text">-Xmx512m</td>
+</tr>
+<tr class="odd">
+<td class="value text">-XX:CMSInitiatingOccupancyFraction=70</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+        Copyright (c) 2005-2012 <a title="Visit the Xceptance website" href="http://www.xceptance.com/">Xceptance Software Technologies</a>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+	function navigate(target) {
+		// does it contain a #
+		var pos = target.lastIndexOf("#");
+
+		if (pos >= 0)
+		{	
+			// is it the current document?
+			var targetDocument = target.slice(0, pos);
+			var targetHashText = target.slice(pos);
+
+			var path = window.location.pathname.split( '/' );
+			var currentDocument = path[path.length - 1];
+
+			if (targetDocument == currentDocument || targetDocument == "")
+			{
+				// before we run it, check that this exists 
+				if (targetHashText.length > 0) {
+					// quote any "." in the hash, otherwise JQuery interprets the following chars as class 
+					targetHashText = targetHashText.replace(/\./g, "\\.");
+					$.scrollTo(targetHashText, 250, {easing:'swing', offset: {top: -35}}); 
+					return false;
+				}
+			}
+		}
+
+		return true;
+	}
+
+	function scrollTo() {
+		navigate(window.location.hash);
+	}
+</script>
+
+
+<script type="text/javascript">
+		// start with on document ready and prep the functionality
+		$(document).ready(
+			function () 
+			{
+				// setup menu
+				$('#superfish').superfish({delay:0, autoArrows:false, speed:'fast'}); 
+
+				// setup scrolling magic for navigation and summary tables
+				$('#navigation a, table a').click(
+					function() {
+						navigate($(this).attr('href'))
+					}
+				);
+
+				// setup click handler to scroll to the top of the page when clicking the navigation bar
+				$('#navigation').click(
+					function(event) {
+						// handle direct click events only, but not events that bubbled up 
+						if (event.target.id == this.id) {
+							$.scrollTo(0, 250, {easing:'swing'});
+						}
+					}
+				);
+				
+				// setup the tables
+				Table.auto();
+
+				// get the tabs set up
+				try {
+					$('.tabs').tabs();
+				}
+				catch (e) {
+					// in case we so not have tabs
+				}
+
+				// lazy load the chart images to speed up the site
+				$('div.chart-group').each(
+					function()
+					{
+						var chartGroup = this;
+
+						$('ul', this).each(
+							function()
+							{
+								var counter = 0;
+
+								$('a', this).each(
+									function()
+									{
+										// get the href
+										var id = $(this).attr('href');
+
+										// get the original image img
+										var img = $(id + '> div.chart > img', chartGroup);
+
+										if (counter != 0)
+										{
+											$(this).click(
+												function()
+												{
+													img.attr('src', img.attr('alt'));
+												}
+											);
+										}
+										else
+										{
+											// first tab, show immediately
+											img.attr('src', img.attr('alt'));
+										}
+
+										counter++;
+									}
+								);
+							}
+						);
+					}
+				);
+
+				// the tool tips
+				// #request-summary .section > div .content > div .data > table #TABLE_1 .table-autosort:0 table-autostripe table-stripeclass:odd > tbody > tr . > td .key > a
+				$('#request-summary table td.key a.cluetip').cluetip(
+					{
+						hoverIntent: 
+						{
+    						sensitivity:  1,
+    						interval:     250,
+    						timeout:      250    
+  						},
+  						mouseOutClose: true,
+  						closeText: 'x',
+  						closePosition: 'title',
+  						sticky: true,
+						local: true,
+						showTitle: false,
+						dropShadow: false,
+						positionBy: 'mouse',
+						clickThrough: true
+					}
+				);
+
+				// the tool tips
+				$('table th.cluetip').cluetip(
+					{
+						hoverIntent: 
+						{
+    						sensitivity:  1,
+    						interval:     250,
+    						timeout:      250    
+  						},
+  						mouseOutClose: true,
+  						closeText: 'x',
+  						closePosition: 'title',
+  						sticky: true,
+						local: true,
+						hideLocal: true,
+						showTitle: false,
+						dropShadow: false,
+						positionBy: 'mouse',
+						titleAttribute: '',
+					}
+				);
+				
+				// the collapsible stack traces				
+				$(".collapsible").each(function() 
+				{
+					// the first child is the expand/collapse trigger 
+					$(this).children(":first").addClass("collapsible-collapsed").click(function() 
+					{
+						// restyle the trigger element
+						$(this).toggleClass("collapsible-collapsed");
+						$(this).toggleClass("collapsible-expanded");
+
+						// the next sibling is the element to show/hide 
+						$(this).next().toggle();
+					});
+				});
+
+				// see if we jumped and now have to scroll
+				scrollTo();
+			}
+		);	
+</script>
+	
+</body>
+</html>

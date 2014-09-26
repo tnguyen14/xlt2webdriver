@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html>
+<head>
+<title>Xceptance LoadTest Report - Errors</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.cluetip.css" />
+<link rel="stylesheet" type="text/css" href="css/superfish.custom.css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js">/* Placeholder */</script>
+<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js">/* Placeholder */</script>
+<script type="text/javascript" src="js/jquery.hoverIntent.minified.js">/* Placeholder */</script>
+<script type="text/javascript" src="js/jquery.cluetip.min.js">/* Placeholder */</script>
+<script type="text/javascript" src="js/jquery.scrollTo.min.js">/* Placeholder */</script>
+<script type="text/javascript" src="js/jquery.superfish.js">/* Placeholder */</script>
+<script src="js/table.js" type="text/javascript">/* Placeholder */</script>
+</head>
+<body id="loadtestreport">
+<div id="container">
+<div id="content">
+	
+
+		<div id="navigation">
+			<ul id="superfish" class="sf-menu">
+				<li><a href="index.html">Overview</a>
+					<ul>
+						<li><a href="index.html#load-profile">Load Profile</a></li>
+						<li><a href="index.html#comment">Test Comments</a></li>
+						<li><a href="index.html#general">General Information</a></li>
+						<li><a href="index.html#active-users">Users</a></li>
+						<li><a href="index.html#network">Network</a></li>
+					</ul>
+				</li>
+				<li><a href="transactions.html">Transactions</a></li>
+				<li><a href="actions.html">Actions</a></li>
+				<li><a href="requests.html">Requests</a></li>
+				<li><a href="custom.html">Custom Timers &amp; Values</a>
+                    <ul>
+                        <li><a href="custom.html#custom-timer-summary">Custom Timers</a></li>
+                        <li><a href="custom.html#custom-value-summary">Custom Values</a></li>
+                    </ul>
+                </li>
+				<li><a href="external.html">External Data</a></li>
+				<li><a href="errors.html">Errors &amp; Events</a>
+					<ul>
+						<li><a href="errors.html#error-summary">Errors</a></li>
+						<li><a href="errors.html#http-response-codes">HTTP Response Codes</a></li>
+						<li><a href="errors.html#event-summary">Events</a></li>
+					</ul>
+				</li>
+				<li><a href="agents.html">Agents</a></li>
+				<li><a href="configuration.html">Configuration</a>
+					<ul>
+						<li><a href="configuration.html#load-profile">Load Profile</a></li>	
+						<li><a href="configuration.html#configuration">Settings</a></li>
+					</ul>
+				</li>	
+			</ul>
+		</div>
+		
+	
+<div id="header">
+<img alt="XLT logo" class="logo" src="images/XLT_logo.png" />
+<h1>Load and Performance Test Report</h1>
+<h2>
+				Created with
+				<a href="http://www.xceptance-loadtest.com/?piwik_campaign=TestReport">
+<span class="productname">Xceptance LoadTest</span>
+<span class="productversion">?.?.?</span>
+</a>
+</h2>
+</div>
+<div id="data-content">
+<div id="error-summary" class="section">
+<h2>Errors</h2>
+<div class="content">
+<div class="description">
+<p>
+            This table contains all errors and their stacktraces thrown by the test cases. This data helps to identify application errors or test problems.
+        </p>
+</div>
+<div class="data">
+<table>
+<tr>
+<th>Count</th>
+<th>Test Case</th>
+<th>Directory</th>
+<th>Error Information</th>
+</tr>
+<tr>
+<td colspan="4" class="value text">There are no values to show in this table.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="http-response-codes" class="section">
+<h2>Http Response Codes</h2>
+<div class="content">
+<div class="description">
+<p>
+            HTTP response codes of web activities or other activities during testing that utilize http communication are listed here. 
+            <span class="link more-show" onclick="$('#more-httpresponseN10001').show();$('#more-httpresponseN10001-hide').show(); $(this).hide();" id="more-httpresponseN10001-show">More...</span>
+<span class="link more-hide" onclick="$('#more-httpresponseN10001').hide();$('#more-httpresponseN10001-show').show(); $(this).hide();" id="more-httpresponseN10001-hide">Hide...</span>
+</p>
+<div class="more" id="more-httpresponseN10001">
+<p>
+            	The table contains the response code, the total number of occurrences, and the percentage in relation to the total 
+            	number of response codes.
+	        </p>
+</div>
+</div>
+<div class="data">
+<table>
+<tr>
+<th>Response Code</th>
+<th>Count</th>
+<th>Percentage</th>
+</tr>
+<tr class="odd">
+<td class="key">200</td>
+<td class="value">3,218</td>
+<td class="value">93.33%</td>
+</tr>
+<tr class="even">
+<td class="key">302</td>
+<td class="value">230</td>
+<td class="value">6.67%</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="event-summary" class="section">
+<h2>Events</h2>
+<div class="content">
+<div class="description">
+<p>
+            This table contains all events that occurred during the load test.
+			Events are used to indicate that the test has encountered a situation
+			that is not an error, but is too important to ignore or to write to the log only.
+        </p>
+</div>
+<div class="data">
+<table>
+<tr>
+<th rowspan="2">Test Case</th>
+<th rowspan="2">Event</th>
+<th rowspan="2">Total Count</th>
+<th colspan="2">Event Information</th>
+</tr>
+<tr>
+<th>Count</th>
+<th>Message</th>
+</tr>
+<tr>
+<td colspan="5" class="value text">There are no values to show in this table.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+        Copyright (c) 2005-2012 <a title="Visit the Xceptance website" href="http://www.xceptance.com/">Xceptance Software Technologies</a>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+	function navigate(target) {
+		// does it contain a #
+		var pos = target.lastIndexOf("#");
+
+		if (pos >= 0)
+		{	
+			// is it the current document?
+			var targetDocument = target.slice(0, pos);
+			var targetHashText = target.slice(pos);
+
+			var path = window.location.pathname.split( '/' );
+			var currentDocument = path[path.length - 1];
+
+			if (targetDocument == currentDocument || targetDocument == "")
+			{
+				// before we run it, check that this exists 
+				if (targetHashText.length > 0) {
+					// quote any "." in the hash, otherwise JQuery interprets the following chars as class 
+					targetHashText = targetHashText.replace(/\./g, "\\.");
+					$.scrollTo(targetHashText, 250, {easing:'swing', offset: {top: -35}}); 
+					return false;
+				}
+			}
+		}
+
+		return true;
+	}
+
+	function scrollTo() {
+		navigate(window.location.hash);
+	}
+</script>
+
+
+<script type="text/javascript">
+		// start with on document ready and prep the functionality
+		$(document).ready(
+			function () 
+			{
+				// setup menu
+				$('#superfish').superfish({delay:0, autoArrows:false, speed:'fast'}); 
+
+				// setup scrolling magic for navigation and summary tables
+				$('#navigation a, table a').click(
+					function() {
+						navigate($(this).attr('href'))
+					}
+				);
+
+				// setup click handler to scroll to the top of the page when clicking the navigation bar
+				$('#navigation').click(
+					function(event) {
+						// handle direct click events only, but not events that bubbled up 
+						if (event.target.id == this.id) {
+							$.scrollTo(0, 250, {easing:'swing'});
+						}
+					}
+				);
+				
+				// setup the tables
+				Table.auto();
+
+				// get the tabs set up
+				try {
+					$('.tabs').tabs();
+				}
+				catch (e) {
+					// in case we so not have tabs
+				}
+
+				// lazy load the chart images to speed up the site
+				$('div.chart-group').each(
+					function()
+					{
+						var chartGroup = this;
+
+						$('ul', this).each(
+							function()
+							{
+								var counter = 0;
+
+								$('a', this).each(
+									function()
+									{
+										// get the href
+										var id = $(this).attr('href');
+
+										// get the original image img
+										var img = $(id + '> div.chart > img', chartGroup);
+
+										if (counter != 0)
+										{
+											$(this).click(
+												function()
+												{
+													img.attr('src', img.attr('alt'));
+												}
+											);
+										}
+										else
+										{
+											// first tab, show immediately
+											img.attr('src', img.attr('alt'));
+										}
+
+										counter++;
+									}
+								);
+							}
+						);
+					}
+				);
+
+				// the tool tips
+				// #request-summary .section > div .content > div .data > table #TABLE_1 .table-autosort:0 table-autostripe table-stripeclass:odd > tbody > tr . > td .key > a
+				$('#request-summary table td.key a.cluetip').cluetip(
+					{
+						hoverIntent: 
+						{
+    						sensitivity:  1,
+    						interval:     250,
+    						timeout:      250    
+  						},
+  						mouseOutClose: true,
+  						closeText: 'x',
+  						closePosition: 'title',
+  						sticky: true,
+						local: true,
+						showTitle: false,
+						dropShadow: false,
+						positionBy: 'mouse',
+						clickThrough: true
+					}
+				);
+
+				// the tool tips
+				$('table th.cluetip').cluetip(
+					{
+						hoverIntent: 
+						{
+    						sensitivity:  1,
+    						interval:     250,
+    						timeout:      250    
+  						},
+  						mouseOutClose: true,
+  						closeText: 'x',
+  						closePosition: 'title',
+  						sticky: true,
+						local: true,
+						hideLocal: true,
+						showTitle: false,
+						dropShadow: false,
+						positionBy: 'mouse',
+						titleAttribute: '',
+					}
+				);
+				
+				// the collapsible stack traces				
+				$(".collapsible").each(function() 
+				{
+					// the first child is the expand/collapse trigger 
+					$(this).children(":first").addClass("collapsible-collapsed").click(function() 
+					{
+						// restyle the trigger element
+						$(this).toggleClass("collapsible-collapsed");
+						$(this).toggleClass("collapsible-expanded");
+
+						// the next sibling is the element to show/hide 
+						$(this).next().toggle();
+					});
+				});
+
+				// see if we jumped and now have to scroll
+				scrollTo();
+			}
+		);	
+</script>
+	
+</body>
+</html>

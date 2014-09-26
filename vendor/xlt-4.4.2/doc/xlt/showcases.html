@@ -1,0 +1,76 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<link type="text/css" rel="stylesheet" href="css/shCore.css" />
+<link type="text/css" rel="stylesheet" href="css/shThemeXceptance.css" />
+
+<link type="text/css" rel="stylesheet" href="css/lightbox.css" />
+
+<link type="text/css" rel="stylesheet" href="css/default.css" media="all"/>
+<link type="text/css" rel="stylesheet" href="css/print.css" media="print"/>
+
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"><!-- empty --></script>
+<script type="text/javascript" src="js/jquery.scrollTo-1.4.3.1-min.js"><!-- empty --></script>
+<script type="text/javascript" src="js/jquery.toc-1.1.4.min.js"><!-- empty --></script>
+<script type="text/javascript" src="js/jquery.lightbox.js"><!-- empty --></script>
+
+<script type="text/javascript" src="js/shCore.js"><!-- empty --></script>
+<script type="text/javascript" src="js/shBrushJScript.js"><!-- empty --></script>
+<script type="text/javascript" src="js/shBrushBash.js"><!-- empty --></script>
+<script type="text/javascript" src="js/shBrushJava.js"><!-- empty --></script>
+<script type="text/javascript" src="js/shBrushCss.js"><!-- empty --></script>
+<script type="text/javascript" src="js/shBrushPlain.js"><!-- empty --></script>
+<script type="text/javascript" src="js/shBrushXml.js"><!-- empty --></script>
+<script type="text/javascript" src="js/shBrushRuby.js"><!-- empty --></script>
+
+<script type="text/javascript" src="js/xltdoc.js"><!-- empty --></script>
+<title>Xceptance LoadTest - XLT 4.4.2 - Showcases</title></head><body><div id="globalNavigation">
+    <ul>
+        <li><a href="http://www.xceptance-loadtest.com/" title="XLT Online">XLT Online</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="index.html" title="The documentation index page.">Index</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="https://lab.xceptance.de/releases/xlt/4.4.2/xlt-4.4.2.zip" title="Download this release">Download</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="releasenotes.html" title="Release Notes">Release Notes</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="quick-start-guide.html" title="Quick Start Guide">Quick Start Guide</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="user-manual.html" title="User Manual">User Manual</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="https://lab.xceptance.de/releases/xlt/latest/apidoc/" title="Online API Documentation">API</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="faq.html" title="Frequently Asked Questions">FAQ</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="license.html" title="License">License</a></li>
+        <li><span class="separator">|</span></li>
+        <li><a href="glossary.html" title="Glossary">Glossary</a></li>
+    </ul>
+ </div><div id="container" class="simple"><noscript><div style="text-align:center;">Please activate JavaScript in your browser to use the table of contents and source code syntax highlighting in this document.</div></noscript><h1 id="imagesXLTlogo.pngXLTLogoShowcases"><img alt="XLT Logo" title="XLT Logo" border="0" src="images/XLT_logo.png"/> Showcases</h1><div id="toc" class="unnumbered"></div>
+ <div id="content"><h2 id="Showcases">Showcases</h2><h3 id="Ajax">Ajax</h3><p>Ajax requests will be handled automatically. XLT waits for the response to arrive to make the Ajax content available after execution.</p><h4 id="TestcaseTAjax">Test case: <em>TAjax</em> </h4><p>This test case demonstrates the handling of Ajax requests. On the show case page, the content of a <code>div</code> is changed by clicking a button that triggers an Ajax request. The content of the <code>div</code> will be checked before and after the request.</p><h3 id="Alertbox">Alert box</h3><p>For alert boxes, you have to add a handler that catches the messages of the alerts. Besides that, you don&#8217;t have to pay attention to the alert boxes. You can continue your tests without closing the alert boxes. This is a major difference to a real browser.</p><h4 id="TestcaseTAlert">Test case: <em>TAlert</em></h4><p>This test case shows the proper handling of alert boxes with XLT. Alert boxes are caught by an alert handler. There is no need to push the any button of the alert box (neither a way to do this). In the action, we will first see a <code>onclick</code> alert and afterwards an <code>onload</code> alert. For both cases we added an alert handler.</p><h3 id="CompareImages">Compare Images</h3><p>Image comparison is quite simple. We only have to download the image. Afterwards you can use common utilities to compare or manipulate it.</p><h4 id="TestcaseTCompareImages">Test case: <em>TCompareImages</em></h4><p>In this test case, we compare an image from a web page with an image from disk. First we load the image to a file. Afterwards we compare both images.</p><h3 id="Confirmbox">Confirm box</h3><p>Confirm boxes allow the user to confirm or cancel an action. To handle these boxes, we have to add a confirm handler. Otherwise XLT will confirm the box automatically (OK button is pressed). The confirm handler contains  instructions to determine which button should be pressed.</p><h4 id="TestcaseTConfirm">Test case: <em>TConfirm</em></h4><p>This test case demonstrate how to handle confirm message boxes. We will run the action twice. First we will press the OK button, after that the cancel button. To handle the confirm box, we have to add a confirm handler. Check the <code>HandlerConfirm</code> class for details.</p><h3 id="Filedownload">File download</h3><p>To download a file, you need the absolute URL of the file. Afterwards you can use common utilities to save the file to disk.</p><h4 id="TestcaseTFileDownload">Test case: <em>TFileDownload</em></h4><p>This test case will show how XLT handles file downloads. As example we download a text, a pdf, a png and a jpg file. These files are written to disk and can be found in the result/TFileDownload folder.</p><h3 id="Fileupload">File upload</h3><p>In general you have to enter the location of the file to an input field and press the submit button. This show case is quite similar to a general test of a form.</p><h4 id="TestcaseTFileUpload">Test case: <em>TFileUpload</em></h4><p>This test case demonstrates a file upload. Our page is quite simple and provides a form for the path of the file and a submit button. We just enter the file path to the input field and submit the form. As result we get a success message.</p><p>Afterwards we should find a <code>test.txt</code> file in the samples/app-server/webapps/showcases/upload/uploads/ folder.</p><h3 id="Frames">Frames</h3><p>A frames page is a combination of multiple html pages. For the interaction with a frame, you have to select the appropriate page for that frame first. Afterwards you can perform your test as usual.</p><h4 id="TestcaseTFrames">Test case: <em>TFrames</em></h4><p>This test case demonstrates the handling of frames. We have a simple page with two frames. The first frame contains the navigation and the second the content. In our test, we click different navigation links and check whether or not the content frame displays the correct content.</p><h3 id="Iframes">Iframes</h3><p>Iframes are quite similar to frames. </p><h4 id="TestcaseTiFrames">Test case: <em>TiFrames</em></h4><p>This test case demonstrates the handling of iframes. It is quite similar to the handling of frames. So feel free to check the TFrames testcase, too. It will also show the handling of frames in iframes. The demonstration page contains an iframe with a link that displays the page in the iframe again.</p><h3 id="HandlePDFs">Handle PDFs</h3><p>To handle PDFs you have to include an additional library. We provide samples for the <a href="http://www.lowagie.com/iText/">iText</a> and <a href="http://incubator.apache.org/pdfbox/">PDFBox</a> library. </p><h4 id="TestcaseTPdfContentSearchitext">Test case: <em>TPdfContentSearch_itext</em></h4><p>This test case demonstates how to search in a PDF file for a certain word using the iText library. We take the PDF file and search on each page sequentially.</p><h4 id="TestcaseTPdfContenSearchpdfbox">Test case: <em>TPdfContenSearch_pdfbox</em></h4><p>The same example using the PDFbox library. </p><h3 id="Popups">Popups</h3><p>A popup is an additional window. So we have two valid windows and have to check if we have the correct window as page. Otherwise we have to select the window first.  </p><h4 id="TestcaseTPopup">Test case: <em>TPopup</em></h4><p>In this test case we learn how to handle a popup. The test case page contains a button that opens a popup. In this popup, we enter a text and press apply. This transfers the text to the start page and closes the popup.</p><p>Afterwards we load a page with a onload popup. We show how to work with the different WebWindows and close the popup at the end.</p><h3 id="Prompt">Prompt</h3><p>The prompt function is another JavaScript message box (see alert and confirm boxes). To handle these boxes we have to add a prompt handler.</p><h4 id="TestcaseTPrompt">Test case: <em>TPrompt</em></h4><p>This test case demonstrates the handling of prompt boxes. Our page contains a button which opens a prompt box. The entered message is displayed on the page. To handle the prompt box we have to add a PromptHandler.</p><p>Keep in mind that some input is refused by the prompt, e.g. <script>.</p><p id="copyright">Copyright &#169; 2014 by <a href="http://www.xceptance.com/">Xceptance Software Technologies</a>. All rights reserved. <br/> </div> <br/> </div> </p><!-- Piwik, call it only when the doc is hosted by Xceptance -->
+
+<!-- disabled for now (#2071)
+
+<script type="text/javascript">
+(function(w, $){
+    var d = w.document,
+        l = d.location,
+        host = l.hostname || "localhost",
+        hostedByXC = host.match(/xceptance[^.]*\.[a-zA-Z]+$/i);
+
+    if(hostedByXC){
+        var pkUrl = (("https:" === l.protocol) ? "https://" : "http://") + "stats.xceptance.com/";
+        d.write(w.unescape("%3Cscript src='" + pkUrl + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+        $(w).load(function(){
+            try {
+                var piwikTracker = Piwik.getTracker(pkUrl + "piwik.php", 4);
+                piwikTracker.trackPageView();
+                piwikTracker.enableLinkTracking();
+            } catch(e) {}
+        });
+    }
+})(window, jQuery);
+</script>
+
+-->
+</body>
+</html>
