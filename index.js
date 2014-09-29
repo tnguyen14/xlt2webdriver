@@ -44,14 +44,13 @@ function testSuite(ts) {
 		cases.filter(junk.not).forEach(function (tc) {
 			testCase(smoketestPath + ts + '/' + tc, ts);
 		});
+		// testCase(smoketestPath + ts + '/' + cases[cases.length - 2], ts);
 	});
 }
 
 function testCase(tc, ts) {
 	fs.readFile(tc, 'utf8', function (err, res) {
 		if (err) throw err;
-		console.log(tc);
-		console.log(parse(res));
 		var fileName = path.basename(tc, '.xml') + '.js';
 		fs.writeFileSync(smoketestPathOut + ts + '/' + fileName, parse(res));
 	});
@@ -61,4 +60,5 @@ function testCase(tc, ts) {
 fs.readdir(smoketestPath, function (err, suites) {
 	if (err) throw err;
 	suites.forEach(testSuite);
+	// testSuite(suites[suites.length - 1]);
 });
