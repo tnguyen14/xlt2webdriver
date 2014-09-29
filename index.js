@@ -38,19 +38,22 @@ fs.readdir(commandPath, function (err, files) {
 });
 
 function testSuite(ts) {
+	mkdirp.sync(smoketestPathOut + ts);
 	fs.readdir(smoketestPath + ts, function (err, cases) {
 		if (err) throw err;
 		cases.filter(junk.not).forEach(function (tc) {
-			testCase(smoketestPath + ts + '/' + tc);
+			testCase(smoketestPath + ts + '/' + tc, ts);
 		});
 	});
 }
 
-function testCase(tc) {
+function testCase(tc, ts) {
 	fs.readFile(tc, 'utf8', function (err, res) {
 		if (err) throw err;
 		console.log(tc);
 		console.log(parse(res));
+		var fileName = path.basename(tc, '.xml') + '.js';
+		fs.writeFileSync(smoketestPathOut + ts + '/' + fileName, parse(res));
 	});
 }
 
