@@ -4,23 +4,25 @@ var fs = require('fs');
 var path = require('path');
 var parse = require('./lib/parse');
 var junk = require('junk');
+var mkdirp = require('mkdirp');
 
-var commandPath = 'vendor/ecom-gui-test/scripts/A_common/command/';
+var scriptsPath = 'vendor/ecom-gui-test/scripts/';
 var outPath = require('./config.json').dist + '/';
+var command = 'A_common/command/';
 
-fs.exists(outPath, function (exists) {
+fs.exists(outPath + command, function (exists) {
 	if (!exists) {
-		fs.mkdirSync(outPath);
+		mkdirp.sync(outPath + command);
 	}
 });
 
-fs.readdir(commandPath, function (err, files) {
+fs.readdir(scriptsPath + command, function (err, files) {
 	if (err) throw err;
 	files.filter(junk.not).forEach(function (file) {
-		fs.readFile(commandPath + file, 'utf8', function (err, res) {
+		fs.readFile(scriptsPath + command + file, 'utf8', function (err, res) {
 			if (err) throw err;
 			var fileNameJs = path.basename(file, '.xml') + '.js';
-			fs.writeFileSync(outPath + fileNameJs, parse(res));
+			fs.writeFileSync(outPath + command + fileNameJs, parse(res));
 		});
 	});
 });
