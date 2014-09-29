@@ -2,6 +2,10 @@
   "name": "xlt-parser",
   "version": "1.0.0",
   "description": "parse XLT scripts into JS scripts based on webdriverio APIs",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tnguyen14/xlt2webdriver.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
