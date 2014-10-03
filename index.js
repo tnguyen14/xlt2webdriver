@@ -23,6 +23,9 @@ var smoketestPathOut = path.join(outPath, smoketest);
 var appmodulesPath = path.join(scriptsPath, appmodules);
 var appmodulesPathOut = path.join(outPath, appmodules);
 
+// make dist dir
+mkdirp.sync(outPath);
+
 // common commands
 fs.readdir(commandPath, function (err, files) {
 	if (err) throw err;
