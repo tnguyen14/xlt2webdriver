@@ -4,6 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var parse = require('./lib/parse');
 var client = require('./lib/client');
+var createTestSuite = require('./lib/testSuite');
 var junk = require('junk');
 var mkdirp = require('mkdirp');
 var readdirp = require('readdirp');
@@ -69,9 +70,12 @@ function testSuite(ts) {
 	mkdirp.sync(path.join(smoketestPathOut, ts));
 	fs.readdir(path.join(smoketestPath, ts), function (err, cases) {
 		if (err) throw err;
-		cases.filter(junk.not).forEach(function (tc) {
+		cases = cases.filter(junk.not);
+		console.log(cases);
+		cases.forEach(function (tc) {
 			testCase(path.join(smoketestPath, ts, tc), ts);
 		});
+		fs.writeFileSync(path.join(smoketestPathOut, ts, 'index.js'), createTestSuite(cases));
 		// testCase(smoketestPath + ts + '/' + cases[cases.length - 2], ts);
 	});
 }
