@@ -3,14 +3,16 @@
 var fs = require('fs');
 var path = require('path');
 var parse = require('./lib/parse');
+var client = require('./lib/client');
 var junk = require('junk');
 var mkdirp = require('mkdirp');
 var readdirp = require('readdirp');
 var es = require('event-stream');
+var config = require('./config.json');
 
 // paths
 var scriptsPath = 'vendor/ecom-gui-test/scripts/';
-var outPath = require('./config.json').dist;
+var outPath = config.dist;
 var command = 'A_common/command/';
 var smoketest = 'TESTS/SiteGenesis/PUBLIC/smoketest';
 var appmodules = 'app/SiteGenesis/';
@@ -91,3 +93,6 @@ fs.readdir(smoketestPath, function (err, suites) {
 	suites.forEach(testSuite);
 	// testSuite(suites[suites.length - 1]);
 });
+
+// client
+fs.writeFileSync(path.join(outPath, 'client.js'), client(config.client));
