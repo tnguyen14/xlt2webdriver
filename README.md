@@ -7,7 +7,7 @@
 $ git clone --recursive https://github.com/tnguyen14/xlt2webdriver.git
 $ npm i
 $ cd xlt2webdriver
-$ node index.js
+$ npm run build
 ```
 
 
