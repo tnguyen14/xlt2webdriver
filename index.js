@@ -3,7 +3,6 @@
 var fs = require('fs');
 var path = require('path');
 var parse = require('./lib/parse');
-var webdriver = require('./lib/webdriver');
 var createTestSuite = require('./lib/testSuite');
 var junk = require('junk');
 var mkdirp = require('mkdirp');
@@ -99,6 +98,3 @@ fs.readdir(smoketestPath, function (err, suites) {
 	suites.forEach(testSuite);
 	// testSuite(suites[suites.length - 1]);
 });
-
-// client
-fs.writeFileSync(path.join(outPath, 'webdriver.js'), webdriver(config.client));
