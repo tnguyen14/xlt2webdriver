@@ -3,7 +3,7 @@
 var fs = require('fs');
 var path = require('path');
 var parse = require('./lib/parse');
-var client = require('./lib/client');
+var webdriver = require('./lib/webdriver');
 var createTestSuite = require('./lib/testSuite');
 var junk = require('junk');
 var mkdirp = require('mkdirp');
@@ -71,7 +71,6 @@ function testSuite(ts) {
 	fs.readdir(path.join(smoketestPath, ts), function (err, cases) {
 		if (err) throw err;
 		cases = cases.filter(junk.not);
-		console.log(cases);
 		cases.forEach(function (tc) {
 			testCase(path.join(smoketestPath, ts, tc), ts);
 		});
@@ -102,4 +101,4 @@ fs.readdir(smoketestPath, function (err, suites) {
 });
 
 // client
-fs.writeFileSync(path.join(outPath, 'client.js'), client(config.client));
+fs.writeFileSync(path.join(outPath, 'webdriver.js'), webdriver(config.client));
