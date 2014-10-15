@@ -58,7 +58,7 @@ appModulesStream
 			var basename = path.basename(m.path, '.xml');
 			var dirname = path.dirname(m.path);
 			mkdirp.sync(path.join(appmodulesPathOut, dirname));
-			fs.writeFileSync(path.join(appmodulesPathOut, dirname, basename + '.js'), parse(res, basename));
+			fs.writeFileSync(path.join(appmodulesPathOut, dirname, basename + '.js'), parse(res, dirname + '/' + basename));
 		});
 	}))
 	.pipe(es.stringify())
