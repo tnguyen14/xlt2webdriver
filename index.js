@@ -33,8 +33,8 @@ fs.readdir(commandPath, function (err, files) {
 	files.filter(junk.not).forEach(function (file) {
 		fs.readFile(path.join(commandPath, file), 'utf8', function (err, res) {
 			if (err) throw err;
-			var fileNameJs = path.basename(file, '.xml') + '.js';
-			fs.writeFileSync(path.join(commandPathOut, fileNameJs), parse(res));
+			var fileName = path.basename(file, '.xml');
+			fs.writeFileSync(path.join(commandPathOut, fileName + '.js'), parse(res, fileName));
 		});
 	});
 });
@@ -55,10 +55,10 @@ appModulesStream
 	.pipe(es.mapSync(function (m) {
 		fs.readFile(path.join(appmodulesPath, m.path), 'utf8', function (err, res) {
 			if (err) throw err;
-			var basename = path.basename(m.path, '.xml') + '.js';
+			var basename = path.basename(m.path, '.xml');
 			var dirname = path.dirname(m.path);
 			mkdirp.sync(path.join(appmodulesPathOut, dirname));
-			fs.writeFileSync(path.join(appmodulesPathOut, dirname, basename), parse(res));
+			fs.writeFileSync(path.join(appmodulesPathOut, dirname, basename + '.js'), parse(res, basename));
 		});
 	}))
 	.pipe(es.stringify())
@@ -87,7 +87,7 @@ function testCase(tc, ts) {
 			basename = basename.slice(0, basename.indexOf('_data'));
 		}
 		mkdirp.sync(path.join(smoketestPathOut, ts, basename));
-		fs.writeFileSync(path.join(smoketestPathOut, ts, basename, filename), parse(res));
+		fs.writeFileSync(path.join(smoketestPathOut, ts, basename, filename), parse(res, basename));
 	});
 }
 
