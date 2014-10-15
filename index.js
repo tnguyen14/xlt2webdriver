@@ -73,8 +73,7 @@ function testSuite(ts) {
 		cases.forEach(function (tc) {
 			testCase(path.join(smoketestPath, ts, tc), ts);
 		});
-		fs.writeFileSync(path.join(smoketestPathOut, ts, 'index.js'), createTestSuite(cases));
-		// testCase(smoketestPath + ts + '/' + cases[cases.length - 2], ts);
+		fs.writeFileSync(path.join(smoketestPathOut, ts, 'index.js'), createTestSuite(cases, ts));
 	});
 }
 
@@ -96,5 +95,4 @@ function testCase(tc, ts) {
 fs.readdir(smoketestPath, function (err, suites) {
 	if (err) throw err;
 	suites.forEach(testSuite);
-	// testSuite(suites[suites.length - 1]);
 });
