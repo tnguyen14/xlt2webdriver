@@ -81,13 +81,18 @@ function testCase(tc, ts) {
 	fs.readFile(tc, 'utf8', function (err, res) {
 		if (err) throw err;
 		var basename = path.basename(tc, '.xml');
-		var filename = 'index.js';
+		// ignore data files here, handle it separately
 		if (basename.indexOf('_data') !== -1) {
-			filename = 'data.js';
-			basename = basename.slice(0, basename.indexOf('_data'));
+			return;
 		}
+		var dataFile = path.join(path.dirname(tc), basename + '_data.xml');
+		if (!fs.existsSync(dataFile)) {
+			dataFile = __dirname + '/data.sample.xml';
+		}
+		var dataContent = fs.readFileSync(dataFile, 'utf8');
 		mkdirp.sync(path.join(smoketestPathOut, ts, basename));
-		fs.writeFileSync(path.join(smoketestPathOut, ts, basename, filename), parse(res, basename));
+		fs.writeFileSync(path.join(smoketestPathOut, ts, basename, 'index.js'), parse(res, basename));
+		fs.writeFileSync(path.join(smoketestPathOut, ts, basename, 'data.js'), parse(dataContent, basename));
 	});
 }
 
