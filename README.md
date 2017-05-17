@@ -1,4 +1,6 @@
 # XLT2webdriver
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/tnguyen14/xlt2webdriver.svg)](https://greenkeeper.io/)
 > parse XLT scripts into JS scripts based on webdriverio APIs
 
 ## Usage
